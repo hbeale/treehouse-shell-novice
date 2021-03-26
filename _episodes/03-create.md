@@ -118,7 +118,7 @@ thesis/chapter_1/section_1/subsection_1:
 
 > ## Two ways of doing the same thing
 > Using the shell to create a directory is no different than using a file explorer.
-> If you open the current directory using your operating system's graphical file explorer,
+> If you ran these commands on your own computer rather than a server, you could open the current directory using your operating system's graphical file explorer,
 > the `thesis` directory will appear there too.
 > While the shell and the file explorer are two different ways of interacting with the files,
 > the files and directories themselves are the same.
@@ -296,7 +296,7 @@ draft.txt
 Returning to the `data-shell` directory,
 
 ```
-cd ~/Desktop/data-shell/
+cd ~/data-shell/
 ```
 {: .language-bash}
 
