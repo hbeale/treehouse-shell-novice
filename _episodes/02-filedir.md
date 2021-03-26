@@ -49,12 +49,12 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle
+/public/home/nelle
 ~~~
 {: .output}
 
 Here,
-the computer's response is `/Users/nelle`,
+the computer's response is `/public/home/nelle`,
 which is Nelle's **home directory**:
 
 > ## Home Directory Variation
@@ -64,7 +64,7 @@ which is Nelle's **home directory**:
 > and on Windows it will be similar to `C:\Documents and Settings\nelle` or
 > `C:\Users\nelle`.
 > (Note that it may look slightly different for different versions of Windows.)
-> In future examples, we've used Mac output as the default - Linux and Windows
+> In future examples, we've used the ouptput you'll see on Genomics Institute server "courtyard"  as the default - other servers and other operating systems (like Mac and Windows)
 > output may differ slightly, but should be generally similar.
 {: .callout}
 >  
@@ -135,6 +135,7 @@ $ ls
 ~~~
 {: .language-bash}
 
+On Courtyard you will get no results because you haven't added any files there. On Mac, a person might see:
 ~~~
 Applications Documents    Library      Music        Public
 Desktop      Downloads    Movies       Pictures
