@@ -226,9 +226,10 @@ $ ls -F /
 {: .language-bash}
 
 ~~~
-Applications/         System/
-Library/              Users/
-Network/              Volumes/
+bin   cactusTestData   dev   home   lib64   misc   nanopore   
+opt   proc   public   run   scratch   sys   ucsf   var
+boot   data   etc   lib   media   mnt   net   
+
 ~~~
 {: .output}
 
@@ -380,7 +381,7 @@ To **quit** the `man` pages, press <kbd>Q</kbd>.
 
 ### Exploring Other Directories
 
-Not only can we use `ls` on the current working directory, but we can use it to list the contents of a different directory.  Let's take a
+As we've seen above, not only can we use `ls` on the current working directory, but we can use it to list the contents of a different directory.  Let's take a
 look at our `/public/home/hcbeale/example/` directory by running `ls -F /public/home/hcbeale/example/`,
 i.e.,
 the command `ls` with the `-F` **option** and the **argument**  `Desktop`.
