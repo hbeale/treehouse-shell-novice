@@ -128,17 +128,17 @@ Typically, when you open a new command prompt you will be in
 your home directory to start.
 
 Now let's learn the command that will let us see the contents of our
-own filesystem.  We can see what's in our home directory by running `ls`:
+own filesystem.  We can see what's in an example directory by running `ls /public/home/hcbeale/example`:
 
 ~~~
-$ ls
+$ ls /public/home/hcbeale/example
 ~~~
 {: .language-bash}
 
 On Courtyard you will get no results because you haven't added any files there. On Mac, a person might see:
 ~~~
-Applications Documents    Library      Music        Public
-Desktop      Downloads    Movies       Pictures
+data-shell  G28607_KRAS_G12V.ann.vcf  
+G28607_KRAS_G12V.bam  G28607_KRAS_G12V.bam.bai
 ~~~
 {: .output}
 
@@ -159,13 +159,13 @@ the shell might also use colors to indicate whether each entry is a file or
 directory.
 
 ~~~
-$ ls -F
+$ ls -F /public/home/hcbeale/example
 ~~~
 {: .language-bash}
 
 ~~~
-Applications/ Documents/    Library/      Music/        Public/
-Desktop/      Downloads/    Movies/       Pictures/
+data-shell/  G28607_KRAS_G12V.ann.vcf  
+G28607_KRAS_G12V.bam  G28607_KRAS_G12V.bam.bai
 ~~~
 {: .output}
 
@@ -177,7 +177,7 @@ Desktop/      Downloads/    Movies/       Pictures/
 {: .callout}
 
 Here,
-we can see that our home directory contains only **sub-directories**.
+we can see that the example directory contains a **sub-directory** (example_dir).
 Any names in your output that don't have a classification symbol,
 are plain old **files**.
 
@@ -206,11 +206,11 @@ between `ls` and `-F` the shell will look for a command called `ls-F`, which
 doesn't exist. Also, capitalization can be important. For example, `ls -s` will display the size of files and directories alongside the names, while `ls -S` will sort the files and directories by size, as shown below:
 
 ~~~
-$ ls -s Desktop/data-shell/data
+$ ls -s /public/home/hcbeale/example/data-shell/data
 total 116
  4 amino-acids.txt   4 animals.txt   4 morse.txt  12 planets.txt  76 sunspot.txt
  4 animal-counts     4 elements      4 pdb         4 salmon.txt
-$ ls -S Desktop/data-shell/data
+$ ls -S /public/home/hcbeale/example/data-shell/data
 sunspot.txt  animal-counts  pdb        amino-acids.txt  salmon.txt
 planets.txt  elements       morse.txt  animals.txt
 ~~~
@@ -381,14 +381,14 @@ To **quit** the `man` pages, press <kbd>Q</kbd>.
 ### Exploring Other Directories
 
 Not only can we use `ls` on the current working directory, but we can use it to list the contents of a different directory.  Let's take a
-look at our `Desktop` directory by running `ls -F Desktop`,
+look at our `/public/home/hcbeale/example/` directory by running `ls -F /public/home/hcbeale/example/`,
 i.e.,
 the command `ls` with the `-F` **option** and the **argument**  `Desktop`.
-The argument `Desktop` tells `ls` that
+The argument `/public/home/hcbeale/example/` tells `ls` that
 we want a listing of something other than our current working directory:
 
 ~~~
-$ ls -F Desktop
+$ ls -F /public/home/hcbeale/example/
 ~~~
 {: .language-bash}
 
@@ -397,16 +397,10 @@ data-shell/
 ~~~
 {: .output}
 
-Note that if a directory named `Desktop` does not exist in your current working directory
-this command will return an error. Typically a `Desktop` directory exists in your 
-home directory, which we assume is the current working directory of your bash shell.
+Note that if a directory named `/public/home/hcbeale/example/` does not exist in your current working directory
+this command will return an error. 
 
-Your output should be a list of all the files and sub-directories in your
-Desktop directory, including the `data-shell` directory you downloaded at
-the [setup for this lesson]({{ page.root }}{% link setup.md %}).
-On many systems,
-the command line Desktop directory is the same as your GUI Desktop.
-Take a look at your Desktop to confirm that your output is accurate.
+Your output should be a list of all the files and sub-directories in the /public/home/hcbeale/example/ directory, including the `data-shell` directory.
 
 As you may now see, using a bash shell is strongly dependent on the idea that
 your files are organized in a hierarchical file system.
@@ -415,14 +409,14 @@ it's possible to put hundreds of files in our home directory,
 just as it's possible to pile hundreds of printed papers on our desk,
 but it's a self-defeating strategy.
 
-Now that we know the `data-shell` directory is located in our Desktop directory, we
+Now that we know the `data-shell` directory is located in our /public/home/hcbeale/example/ directory, we
 can do two things.
 
 First, we can look at its contents, using the same strategy as before, passing
 a directory name to `ls`:
 
 ~~~
-$ ls -F Desktop/data-shell
+$ ls -F /public/home/hcbeale/example/data-shell
 ~~~
 {: .language-bash}
 
@@ -448,17 +442,17 @@ Let's say we want to move to the `data` directory we saw above.  We can
 use the following series of commands to get there:
 
 ~~~
-$ cd Desktop
+$ cd /public/home/hcbeale/example/
 $ cd data-shell
 $ cd data
 ~~~
 {: .language-bash}
 
-These commands will move us from our home directory into our Desktop directory, then into
+These commands will move us from our home directory into the /public/home/hcbeale/example/ directory, then into
 the `data-shell` directory, then into the `data` directory.  You will notice that `cd` doesn't print anything.  This is normal.  Many shell commands will not output anything to the screen when successfully executed.  But if we run `pwd` after it, we can see that we are now
-in `/Users/nelle/Desktop/data-shell/data`.
+in `/public/home/hcbeale/example/data-shell/data`.
 If we run `ls -F` without arguments now,
-it lists the contents of `/Users/nelle/Desktop/data-shell/data`,
+it lists the contents of `/public/home/hcbeale/example/data-shell/data`,
 because that's where we now are:
 
 ~~~
@@ -467,7 +461,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell/data
+/public/home/hcbeale/example/data-shell/data
 ~~~
 {: .output}
 
@@ -516,7 +510,7 @@ $ cd ..
 or more succinctly,
 the **parent** of the current directory.
 Sure enough,
-if we run `pwd` after running `cd ..`, we're back in `/Users/nelle/Desktop/data-shell`:
+if we run `pwd` after running `cd ..`, we're back in `/public/home/hcbeale/example/data-shell`:
 
 ~~~
 $ pwd
@@ -524,7 +518,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell
+/public/home/hcbeale/example/data-shell
 ~~~
 {: .output}
 
@@ -544,7 +538,7 @@ $ ls -F -a
 
 `-a` stands for 'show all';
 it forces `ls` to show us file and directory names that begin with `.`,
-such as `..` (which, if we're in `/Users/nelle`, refers to the `/Users` directory)
+such as `..` (which, if we're in `/public/home/hcbeale/example/`, refers to the `/public/home/hcbeale` directory)
 As you can see,
 it also displays another special directory that's just called `.`,
 which means 'the current working directory'.
@@ -609,22 +603,19 @@ three commands, but we can actually string together the list of directories
 to move to `data` in one step:
 
 ~~~
-$ cd Desktop/data-shell/data
+$ cd /public/home/hcbeale/example/data-shell/data
 ~~~
 {: .language-bash}
 
 Check that we've moved to the right place by running `pwd` and `ls -F`
 
-If we want to move up one level from the data directory, we could use `cd ..`.  But
-there is another way to move to any directory, regardless of your
-current location.
-
-So far, when specifying directory names, or even a directory path (as above),
-we have been using **relative paths**.  When you use a relative path with a command
+If we want to move up one level from the data directory, we could use `cd ..` which 
+uses a **relative path**.  When you use a relative path with a command
 like `ls` or `cd`, it tries to find that location  from where we are,
-rather than from the root of the file system.
+rather than from the root of the file system. 
 
-However, it is possible to specify the **absolute path** to a directory by
+But when you specified `/public/home/hcbeale/example/data-shell/data`,
+you are using an **absolute path** to a directory by
 including its entire path from the root directory, which is indicated by a
 leading slash.  The leading `/` tells the computer to follow the path from
 the root of the file system, so it always refers to exactly one directory,
@@ -641,12 +632,12 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell/data
+/public/home/hcbeale/example/data-shell/data
 ~~~
 {: .output}
 
 ~~~
-$ cd /Users/nelle/Desktop/data-shell
+$ cd /public/home/hcbeale/example/data-shell
 ~~~
 {: .language-bash}
 
