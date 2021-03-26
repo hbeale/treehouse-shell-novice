@@ -79,12 +79,14 @@ The cursor is usually a flashing or solid block, but it can also be an underscor
 You may have seen it in a text editor program, for example.
 
 So let's try our first command, `ls` which is short for listing.
-This command will list the contents of the current directory:
+This command will list the contents (if any) of the current directory:
 
 ~~~
 $ ls
 ~~~
 {: .language-bash}
+
+If there are any contents in your current directory, the might look like this:
 
 ~~~
 Desktop     Downloads   Movies      Pictures
