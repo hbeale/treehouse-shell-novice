@@ -50,15 +50,18 @@ creatures/  data/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.
 {: .output}
 
 ### Copy the files to your directory
-```
-cp -R /public/home/hcbeale/example/data-shell ~
-```
+
+~~~
+$ cp -R /public/home/hcbeale/example/data-shell ~
+~~~
+{: .language-bash}
 
 ### Move your data-shell directory
 
-```
-cd ~/data-shell
-```
+~~~
+$ cd ~/data-shell
+~~~
+{: .language-bash}
 
 ### Create a directory 
 
@@ -180,8 +183,8 @@ $ nano draft.txt
 >
 > No matter what editor you use, you will need to know where it searches
 > for and saves files. If you start it from the shell, it will (probably)
-> use your current working directory as its default location. If you use
-> your computer's start menu, it may want to save files in your desktop or
+> use your current working directory as its default location. This differs from using a graphical program on
+> you computer; that may want to save files in your desktop or
 > documents directory instead. You can change this by navigating to
 > another directory the first time you 'Save As...'
 {: .callout}
