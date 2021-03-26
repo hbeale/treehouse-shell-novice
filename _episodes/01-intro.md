@@ -92,6 +92,12 @@ Documents   Library     Music       Public
 ~~~
 {: .output}
 
+or if your home directory is empty, the output will be too
+
+~~~
+~~~
+{: .output}
+
 > ## Command not found
 > If the shell can't find a program whose name is the command you typed, it
 > will print an error message such as:
