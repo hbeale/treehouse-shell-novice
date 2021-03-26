@@ -26,7 +26,7 @@ We now know how to explore files and directories,
 but how do we create them in the first place?
 
 ### Step one: see where we are and what we already have
-Let's go back to our `data-shell` directory on the Desktop
+Let's go back to the original `data-shell` directory 
 and use `ls -F` to see what it contains:
 
 ~~~
@@ -35,7 +35,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell
+/public/home/hcbeale/example/data-shell
 ~~~
 {: .output}
 
@@ -49,7 +49,18 @@ creatures/  data/  molecules/  north-pacific-gyre/  notes.txt  pizza.cfg  solar.
 ~~~
 {: .output}
 
-### Create a directory
+### Copy the files to your directory
+```
+cp -R /public/home/hcbeale/example/data-shell ~
+```
+
+### Move your data-shell directory
+
+```
+cd ~/data-shell
+```
+
+### Create a directory 
 
 Let's create a new directory called `thesis` using the command `mkdir thesis`
 (which has no output):
