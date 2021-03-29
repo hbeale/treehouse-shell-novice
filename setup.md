@@ -5,8 +5,7 @@ root: .
 ---
 
 ## Server accounts
-This tutorial assumes that you have an account on the courtyard server and can log in to courtyard. **Let Holly know if you need help with this**.
-   You should end up with a new folder called **`data-shell`** on your Desktop.
+This tutorial assumes that you have an account on the courtyard server and can log in to it. **Let Holly know if you need help with this**.
 
 
 [zip-file]: {{ page.root }}/data/data-shell.zip
