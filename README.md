@@ -3,7 +3,7 @@
 shell-novice
 ============
 
-This is a Treehouse fork of the amazing softward carpentries introduction to the Unix shell for people who have never used the command line before.
+This is a Treehouse fork of the [software carpentries](https://software-carpentry.org/) lesson "[Introduction to the Unix shell](http://swcarpentry.github.io/shell-novice/)" for people who have never used the command line before.
 Please see <https://UCSC-Treehouse.github.io/shell-novice/> for a rendered version of this material,
 [the lesson template documentation][lesson-example]
 for instructions on formatting, building, and submitting material,
