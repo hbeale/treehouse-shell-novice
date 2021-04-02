@@ -78,7 +78,7 @@ The prompt is followed by a **text cursor**, a character that indicates the posi
 The cursor is usually a flashing or solid block, but it can also be an underscore or a pipe. 
 You may have seen it in a text editor program, for example.
 
-So let's try our first command, `ls` which is short for listing.
+So let's try our first command, `ls` which is short for listing (Note: the command starts with the lowercase letter L, not the number 1).
 This command will list the contents (if any) of the current directory:
 
 ~~~
