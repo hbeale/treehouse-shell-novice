@@ -5,7 +5,7 @@ root: .
 ---
 
 ## Server accounts
-This tutorial assumes that you have an account on the courtyard server and can log in to it. **Let Holly know if you need help with this**.
+This tutorial assumes that you have an account on the courtyard server and can log in to it. If that's the case, go ahead to Step 1. **Let Holly know if you need help with this**.
 
 
 [zip-file]: {{ page.root }}/data/data-shell.zip
